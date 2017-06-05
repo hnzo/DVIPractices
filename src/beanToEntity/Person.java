@@ -12,10 +12,13 @@ import java.io.Serializable;
  *
  * @author hnzo
  */
+@javax.persistence.Table(name="Persona")
 @javax.persistence.Entity
 public class Person implements Serializable {
     
+   @javax.persistence.Column(name="NAME")
    private String vorname;
+   @javax.persistence.Column(name="seqname", nullable=false )
    private String nachname;
    @javax.persistence.Id
    private long personId;
